@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js">
+    </script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    
+    <script>
+    	
+        $(function()
+        {
+        	Kakao.init('13fe5c08665b4e8a48dc83219f00ee79');
+        	window.opener.location.href = "https://developers.kakao.com/logout";
+        
+// 			setInterval(function()
+// 			{
+// 				console.log("실행");
+// 				if(Kakao.Auth.getAccessToken() == null)
+// 				{
+// 				    opener.close();
+// 				    self.close();
+// 				}
+// 			},500);
+
+
+			setInterval
+			(
+			 	Kakao.Auth.getStatus(function(statusObj)
+			 	{
+					console.log("실행");
+			 		if(statusObj.status == "not_connected")
+			 		{
+			 			opener.close();
+		 				self.close();
+			 		}
+			 	})
+			,500);
+			
+        });
+        
+        onload = function()
+        {
+              
+        };
+    </script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>
