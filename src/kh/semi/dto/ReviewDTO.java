@@ -61,12 +61,12 @@ public class ReviewDTO {
 		this.re_review = re_review;
 	}
 
-	public String getStar() {
+	public String getRe_star() {
 		return re_star;
 	}
 
-	public void setStar(String star) {
-		this.re_star = star;
+	public void setRe_star(String re_star) {
+		this.re_star = re_star;
 	}
 
 	public Date getRe_date() {
@@ -92,5 +92,4 @@ public class ReviewDTO {
 	public void setRe_like(int re_like) {
 		this.re_like = re_like;
 	}
-
 }

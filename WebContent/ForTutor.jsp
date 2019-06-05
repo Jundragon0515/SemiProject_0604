@@ -2,19 +2,27 @@
    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+
+
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Document</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<link rel="stylesheet"
+   href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script
+   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script
+   src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-lite.js"></script>
 </head>
 <style>
 .ui-datepicker-trigger {
@@ -150,6 +158,10 @@ body {
    border-color: #2e6da4;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2fa10635085a4ff0a059b27677bb8c0debc889f7
 </style>
 <style>
 body {
@@ -167,7 +179,7 @@ body {
 }
 
 .img {
-   
+   background-image: url(메인곰2.jpg);
    width: 150px;
    height: 150px;
    background-size: contain;
@@ -293,70 +305,198 @@ div:focus, cash:focus, input:focus, input[type]:focus, .inputcash:focus
 .searchaddr {
    width: 250px;
 }
+<<<<<<< HEAD
 
 
 </style>
-    
-<script>
-$(function(){
-   
+<!-- 이미지 업로드 스타일 -->
+ <style type="text/css">
+
+        input[type=file] {
+            display: none;
+        }
+
+        .my_button {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            background-color: #fdbc0a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .my_button2 {
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+            padding: 10px;
+            background-color: #fdbc0a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+=======
+<<<<<<<
+HEAD /*
+		*{
+		border: 1px solid black
+		}
+		*/
+</style>
+<!-- 이미지 업로드 스타일 -->
+<style type="text/css">
+input[type=file] {
+	display: none;
+}
+>>>>>>> 2fa10635085a4ff0a059b27677bb8c0debc889f7
+
+.my_button {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	padding: 10px;
+	background-color: #fdbc0a;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.my_button2 {
+	display: inline-block;
+	width: 90px;
+	text-align: center;
+	padding: 10px;
+	background-color: #fdbc0a;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+<<<<<<< HEAD
+        }
+        .imgs_wrap img {
+            max-width: 100px;
+            margin-left: 10px;
+            margin-right: 10px;
+         text-align: center;
+        }
+=======
+.imgs_wrap {
+	border: 1px solid #fdbc0a;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+>>>>>>> 2fa10635085a4ff0a059b27677bb8c0debc889f7
+
+.imgs_wrap img {
+	max-width: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+}
+</style>
+<script type="text/javascript">
+
+        // 이미지 정보들을 담을 배열
+        var sel_files = [];
 
 
-   $('#mytype li > a').on('click', function() {
-   // 버튼에 선택된 항목 텍스트 넣기 
-   $('#mystatus2').text($(this).text());
-   });
+        $(document).ready(function() {
+            $(".input_imgs").on("change", handleImgFileSelect);
+        }); 
 
-   $("#register").on("click", function() {
-      var regex =  /^\d$/;   
-      var price = /^\d{1,6}$/;
-      var max = /^\d{1,2}$/;
-      if(!regex.test($('#max').val())){
-         alert("인원은 숫자만 가능합니다");
-         return false;
-      }
-      else if (!max.test($('#max').val())) {
-         alert('100명 이상의 인원은 관리자에게 문의주세요');
-         return false;
-      }
-      if(!regex.test($('#price').val())){
-         alert("가격은 숫자만 가능합니다");
-         return false;
-      }
-      else if (!price.test($('#price').val())) {
-         alert('100만원 이상의 금액은 관리자에게 문의주세요');
-         return false;
-      }
-      else{
-      $("input[name=intro]").val($("#imtutor").html());
-      $("input[name=down]").val($('#mystatus2').text());
-      $("input[name=zipcode]").val();
-      $("input[name=add1]").val();
-      $("input[name=add2]").val();
-      $("input[name=add3]").val();
-      $("input[name=max]").val();
-      $("input[name=cash]").val();
-      $("input[name=startdate]").val();
-      $("input[name=enddate]").val();
-      $("input[name=explain]").val($('#cont').text());
-      $("input[name=inputtitle]").val($('#title').text());
-      $("form").submit();
-   }
-   });
-   
-   $("#back").on("click",function() {
-      history.go(-1);
-   });
-   
+        function fileUploadAction() {
+            console.log("fileUploadAction");
+            $(".input_imgs").trigger('click');
+        }
+
+        function handleImgFileSelect(e) {
+
+            // 이미지 정보들을 초기화
+            sel_files = [];
+            $(".imgs_wrap").empty();
+
+            var files = e.target.files;
+            var filesArr = Array.prototype.slice.call(files);
+
+            var index = 0;
+            filesArr.forEach(function(f) {
+                if(!f.type.match("image.*")) {
+                    alert("확장자는 이미지 확장자만 가능합니다.");
+                    return;
+                }
+
+                sel_files.push(f);
+
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var html = "<a href=\"javascript:void(0);\" onclick=\"deleteImageAction("+index+")\" id=\"img_id_"+index+"\"><img src=\"" + e.target.result + "\" data-file='"+f.name+"' class='selProductFile' title='Click to remove'></a>";
+                    $(".imgs_wrap").append(html);
+                    index++;
+
+                }
+                reader.readAsDataURL(f);
+                
+            });
+        }
+
+
+
+        function deleteImageAction(index) {
+            console.log("index : "+index);
+            console.log("sel length : "+sel_files.length);
+
+            sel_files.splice(index, 1);
+
+            var img_id = "#img_id_"+index;
+            $(img_id).remove(); 
+        }
+
+        function fileUploadAction() {
+            console.log("fileUploadAction");
+            $(".input_imgs").trigger('click');
+        }
+
+        function submitAction() {
+            console.log("업로드 파일 갯수 : "+sel_files.length);
+            var data = new FormData();
+
+            for(var i=0, len=sel_files.length; i<len; i++) {
+                var name = "image_"+i;
+                data.append(name, sel_files[i]);
+            }
+            data.append("image_count", sel_files.length);
             
+            if(sel_files.length < 1) {
+                alert("한개이상의 파일을 선택해주세요.");
+                return;
+            }
+            if(sel_files.length >3) {
+                alert("파일 업로드는 3개까지 가능합니다");
+                return;
+            }
 
-      
-});
-         
-</script>
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST","./study01_af.html");
+            xhr.onload = function(e) {
+                if(this.status == 200) {
+                    console.log("Result : "+e.currentTarget.responseText);
+                }
+            }
+
+            xhr.send(data);
+
+        }
+
+    </script>
     
 <body>
-   <form action="tutor" method="post"  enctype="multipart/form-data" accept-charset="utf-8" >
+<<<<<<< HEAD
+   <form action="tutor.con" method="post" >
       <div class="container">
          <div class="row">
             <!-- 헤더부분 -->
@@ -382,9 +522,8 @@ $(function(){
                   </div>
                <input type="hidden" name="intro">
             </div>
-         </div><!-- row end tag -->
+         </div>
          <br>
-         
          <!-- 헤더부분 끝 -->
 
          <p>
@@ -414,10 +553,13 @@ $(function(){
                            <li><a class="dropdown-item" href="#">IT</a></li>
                            <li><a class="dropdown-item" href="#">언어</a></li>
                            <li><a class="dropdown-item" href="#">라이프스타일</a></li>
-                           <li><a class="dropdown-item" href="#">재태크</a></li>
+                           <li><a class="dropdown-item" href="#">재테크</a></li>
                         </ul>
                         <input type="hidden" name="down">
                      </div>
+
+
+
                      <div class="mr-1 ml-4 p-0 head col-2 btn-group">
                         <button type="button"
                            class="btn btn-warning p-1 dropdown-toggle"
@@ -485,22 +627,21 @@ $(function(){
                         </div>
                      </div>
                      <div class="mr-1 ml-4 p-0 cash col-2 head cash form-group">
-                        <input type="text" class="inputcash form-control" placeholder="희망인원" name=max id=max>
+                        <input type="text" class="inputcash form-control" placeholder="희망인원" name=max>
                      </div>
                      <div class="mr-1 ml-4 p-0 cash col-2 head cash form-group">
-                        <input type="text" class="inputcash form-control"   placeholder="희망금액" name=cash id=price>
+                        <input type="text" class="inputcash form-control"   placeholder="희망금액" name=cash>
                      </div>
                   </div>
                   <br>
-
                
-                  <div ><h3><span class="badge m-0 p-1 badge-warning">제목입력</span></h3>
+                  <div ><h3><span class="badge m-0 p-1 badge-warning">제목입력</h3></span>
                   <div contentEditable="true" class="mains p-0 m-0 col-12 border-warning " id=title></div>
                      <input type="hidden" name="inputtitle">
                   </div>
                   
                   <input type="hidden" name="title">
-                  <br>
+                  
                   <div class="array clear">
                      <!-- 날짜 고르는 부분 -->
                      <div class="head p-0 m-0 col-2">
@@ -559,12 +700,22 @@ $(function(){
                   </div><!-- 사진 캐러셀 +내용입력 끝--><br>
                   <!--  업로드 버튼 -->
                   
+                  <form id="ajaxform" action="upload.file" method="post" enctype="multipart/form-data">
                      <div class="input_wrap">
-                     <input type="file" value="" name="img"><br>
-                           <input type="file" value="" name="img2"><br>
-                           <input type="file" value="" name="img3">
+                              <a href="javascript:" onclick="fileUploadAction();" class="my_button">파일 찾기(최대 3개)</a> 
+                            <input type="file" class="input_imgs" />
+                  
                        </div>
-       
+                    
+                         <div>
+                             <div class="imgs_wrap">
+                              <img id="img"  />
+                          </div>
+                         </div>
+<!--                             <input type="button" value="사진 업로드" id="files_send"  class="my_button2"> -->
+                            <button type="button" class="btn btn-warning my_button2" id="files_send">사진 업로드</button>
+                         </form>
+                
                   <br>
                   <div class="head btm m-0 p-0 col-12">
                      <button type="button" id="register" class="btn btn-outline-warning">Class 등록하기</button>
@@ -574,7 +725,6 @@ $(function(){
                </div>
             </div>
          </div>
-            
          
          <!-- 컨텐츠 부분 끝-->
          <br>
@@ -597,16 +747,311 @@ $(function(){
                <div class="list col-lg-12 col-md-12 col-sm-12 border-warning"></div>
             </div>
          </div>
-      
+      </div>
+</form>
 <br>
-<button type="button" class="btn btn-warning" id=back>뒤로가기</button>
+<button type="button" class="btn btn-warning">뒤로가기</button>
 <button type="button" class="btn btn-warning">홈으로 가기</button>
-      </div>   
-      
-   
-      </form>
+=======
+	<form action="tutor.con" method="post" >
+
+		<div class="container">
+			<div class="row">
+				<!-- 헤더부분 -->
+				<div class="top col-lg-12">
+					<div class="head welcome">
+						<h4>
+							<span class="badge welcome badge-warning">'튜터'님 환영합니다</span>
+						</h4>
+					</div>
+					<div class=send>
+						<img src="쪽지.png" alt="">
+					</div>
+				</div>
+				<br>
+				<div class="array col-lg-12">
+					<div class=img></div>
+					<!--튜터 본인 사진-->
+					<div id=id class="array border-warning"></div>
+					<!--ID-->
+
+					<br>
+					<div class="intro array border-warning" id="imtutor"
+						contentEditable="true" data-placeholder="튜터를 소개하세요"></div>
+
+					<input type="hidden" name="intro">
+				</div>
+			</div>
+			<br>
+			<!-- 헤더부분 끝 -->
+
+			<p>
+				<a class="btn btn-warning" data-toggle="collapse"
+					href="#collapseExample" role="button" aria-expanded="false"
+					aria-controls="collapseExample"> Class 만들기 ▼ </a>
+			</p>
+
+			<div class=row>
+				<!-- 컨텐츠 부분-->
+				<div class=" col-lg-12 col-md-12 col-sm-12 p-0 m-0"
+					id="collapseExample">
+					<div
+						class="card m-3 col-lg-12 col-md-12 col-sm-12 card-body array border-warning">
+						<!--Class등록 Show부분-->
+						<div class=" drop p-0 ">
+							<!-- 드랍버튼 3개-->
+
+
+							<div class="mr-1 ml-4 p-0 head col-2 btn-group">
+								<button type="button" id="mystatus2"
+									class="btn btn-warning p-1 dropdown-toggle"
+									data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">카테고리</button>
+
+								<ul id="mytype" class="dropdown-menu" role="menu"
+									aria-labelledby="searchType">
+									<li><a class="dropdown-item" href="#">디자인</a></li>
+									<li><a class="dropdown-item" href="#">IT</a></li>
+									<li><a class="dropdown-item" href="#">언어</a></li>
+
+									<li><a class="dropdown-item" href="#">라이프스타일</a></li>
+									<li><a class="dropdown-item" href="#">재테크</a></li>
+								</ul>
+								<input type="hidden" name="down">
+							</div>
+
+
+
+							<div class="mr-1 ml-4 p-0 head col-2 btn-group">
+								<button type="button"
+									class="btn btn-warning p-1 dropdown-toggle"
+									data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">희망지역</button>
+								<div class="dropdown-menu">
+									<input type="button" onclick="sample4_execDaumPostcode()"
+										class="btn addr" value="주소 찾기 클릭"> <span id="guide"
+										style="color: #999; display: none"></span>
+									<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+									<script>
+										//본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
+										function sample4_execDaumPostcode() {
+											new daum.Postcode(
+													{
+														oncomplete : function(
+																data) {
+															// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+															// 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+															// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+															var roadAddr = data.roadAddress; // 도로명 주소 변수
+															var extraRoadAddr = ''; // 참고 항목 변수
+
+															// 법정동명이 있을 경우 추가한다. (법정리는 제외)
+															// 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+															if (data.bname !== ''
+																	&& /[동|로|가]$/g
+																			.test(data.bname)) {
+																extraRoadAddr += data.bname;
+															}
+															// 건물명이 있고, 공동주택일 경우 추가한다.
+															if (data.buildingName !== ''
+																	&& data.apartment === 'Y') {
+																extraRoadAddr += (extraRoadAddr !== '' ? ', '
+																		+ data.buildingName
+																		: data.buildingName);
+															}
+															// 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+															if (extraRoadAddr !== '') {
+																extraRoadAddr = ' ('
+																		+ extraRoadAddr
+																		+ ')';
+															}
+
+															// 우편번호와 주소 정보를 해당 필드에 넣는다.
+															document
+																	.getElementById('sample4_postcode').value = data.zonecode;
+															document
+																	.getElementById("sample4_roadAddress").value = roadAddr;
+															document
+																	.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+
+														}
+													}).open();
+										}
+									</script>
+									<input type="text" id="sample4_postcode"
+										class=" searchaddr zipcode text" placeholder="우편번호"
+										name=zipcode readonly> <input type="text"
+										id="sample4_roadAddress" class=" searchaddr road text"
+										placeholder="도로명주소" name=add1 readonly> <input
+										type="text" id="sample4_jibunAddress"
+										class=" searchaddr road text" placeholder="지번주소" name=add2
+										readonly readonly> <input type="text"
+										id="sample4_detailAddress" class=" searchaddr text"
+										placeholder="상세주소 입력하기" name=add3>
+								</div>
+							</div>
+							<div class="mr-1 ml-4 p-0 cash col-2 head cash form-group">
+								<input type="text" class="inputcash form-control"
+									placeholder="희망인원" name=max>
+							</div>
+							<div class="mr-1 ml-4 p-0 cash col-2 head cash form-group">
+								<input type="text" class="inputcash form-control"
+									placeholder="희망금액" name=cash>
+							</div>
+						</div>
+						<br>
+						<div class="array clear">
+							<!-- 날짜 고르는 부분 -->
+							<div class="head p-0 m-0 col-2">
+								<h3>
+									<span class="badge m-0 p-1 badge-warning">날짜선택</span>
+								</h3>
+							</div>
+							<div class="head pt-1 m-0 pick col-10">
+								<div class="head p-0 m-0 col-lg-6 col-md-6 col-sm-6">
+									시작: <input type="text" id="datepicker" name=startdate>
+								</div>
+								<div class="head p-0 m-0 col-lg-6 col-md-6 col-sm-6">
+									종료: <input type="text" id="datepicker2" name=enddate>
+								</div>
+								<script>
+									$(function() {
+										//모든 datepicker에 대한 공통 옵션 설정
+										$.datepicker
+												.setDefaults({
+													dateFormat : 'yy-mm-dd',
+													showOtherMonths : true,
+													showMonthAfterYear : true,
+													changeYear : false,
+													changeMonth : true,
+													showOn : "both",
+													buttonImage :"http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" ,
+													buttonImageOnly : true,
+													buttonText : "날짜 선택",
+													yearSuffix : "년",
+													monthNamesShort : [ '1', '2', '3', '4', '5','6', '7', '8', '9','10', '11', '12' ],
+													monthNames : [ '1월', '2월',	'3월', '4월', '5월',	'6월', '7월', '8월',	'9월', '10월', '11월',	'12월' ],
+													dayNamesMin : [ '일', '월',	'화', '수', '목', '금','토' ],
+													dayNames : [ '일요일', '월요일',
+															'화요일', '수요일',
+															'목요일', '금요일', '토요일' ],
+													minDate : "-0M",
+													maxDate : "+8M"
+												});
+
+										$("#datepicker").datepicker();
+										$("#datepicker2").datepicker();
+
+										$('#datepicker').datepicker('setDate',	'today');
+										$('#datepicker2').datepicker('setDate',		'+1D');
+
+									});
+								</script>
+							</div>
+						</div>
+						<!-- 날짜 고르는 부분 끝-->
+						<br>
+
+						<div class="array col-12 p-0 m-0">
+							<!-- 사진 캐러셀+내용입력-->
+							<div contentEditable="true" class="main head p-0 m-0 col-12 border-warning " id=cont ></div>
+
+							<input type="hidden" name="explain"><!-- Class 내용 등록-->	
+						</div><!-- 사진 캐러셀 +내용입력 끝--><br>
+						<!--  업로드 버튼 -->
+						
+
+						<form id="ajaxform" action="upload.file" method="post" enctype="multipart/form-data">
+							<div class="input_wrap">
+            						<a href="javascript:" onclick="fileUploadAction();" class="my_button">파일 찾기(최대 3개)</a> 
+          						<input type="file" id="input_imgs" multiple /> 
+						
+        					</div>
+        				
+   			    			<div>
+       				 			<div class="imgs_wrap">
+           			 			<img id="img"  />
+       			 			</div>
+   				 			</div>
+   				 				<input type="button" value="업로드" id="files_send"  class="my_button2">
+   				 			</form>
+						<br>
+						<div class="head btm m-0 p-0 col-12">
+							<button type="button" id="register"
+								class="btn btn-outline-warning">Class 등록하기</button>
+						</div>
+
+						<!--Class등록 Show부분 끝-->
+					</div>
+				</div>
+			</div>
+
+			<!-- 컨텐츠 부분 끝-->
+			<br>
+
+			<div class=row>
+				<div id=myclass class="col-lg-12 col-md-12 col-sm-12">
+					<h4>
+						<span class="badge welcome badge-warning">MY CLASS 모아보기</span>
+					</h4>
+					<div class="list col-lg-12 col-md-12 col-sm-12 border-warning"></div>
+					<br>
+				</div>
+			</div>
+
+			<div class=row>
+				<div id=afterclass class="col-lg-12 col-md-12 col-sm-12">
+					<h4>
+						<span class="badge welcome badge-warning">MY CLASS 후기</span>
+					</h4>
+					<div class="list col-lg-12 col-md-12 col-sm-12 border-warning"></div>
+				</div>
+			</div>
+		</div>
+>>>>>>> 2fa10635085a4ff0a059b27677bb8c0debc889f7
 </body>
 
+<script>
+
+$(document).on('click', '#files_send', function () {
+    var formData = new FormData();
+         
+    for(var i=0; i<$('.input_imgs')[0].files.length; i++){
+        formData.append('uploadFile', $('.input_imgs')[0].files[i]);
+    }
+ 
+    $.ajax({
+        url: 'upload.file',
+        data: formData,
+        processData: false,
+        contentType: false,
+        type: 'POST'
+    });
+});
+ 
+$('#mytype li > a').on('click', function() {
+   // 버튼에 선택된 항목 텍스트 넣기 
+   $('#mystatus2').text($(this).text());
+});
+
+   document.getElementById("register").onclick = function() {
+      $("input[name=intro]").val($("#imtutor").html());
+      $("input[name=down]").val($('#mystatus2').text());
+      $("input[name=zipcode]").val();
+      $("input[name=addr1]").val();
+      $("input[name=addr2]").val();
+      $("input[name=addr3]").val();
+      $("input[name=max]").val();
+      $("input[name=cash]").val();
+      $("input[name=startdate]").val();
+      $("input[name=enddate]").val();
+      $("input[name=explain").val($('#cont').text());
+      $("input[name=inputtitle").val($('#title').text());
+      $("form").submit();
+   };
+   
+</script>
 
 
 </html>
