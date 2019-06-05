@@ -580,7 +580,7 @@
                     <div id="review" class="class_detail">
                         <h3>후기</h3>
                         <div>
-                        	<iframe src="http://localhost:8080/Semi/index.review" id="the_iframe" onload="calcHeight();" name="WrittenPublic" title="게시판뷰" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
+                        	<iframe src="http://localhost:8080/SemiProject_0604-master/index.review?classId=${classInfo.info_classid}" id="the_iframe" onload="calcHeight();" name="WrittenPublic" title="게시판뷰" frameborder="0" scrolling="no" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
                         </div>
                     </div>
                     <!--                    여기까지 mainContent   -->
